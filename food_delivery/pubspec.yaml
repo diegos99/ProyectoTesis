@@ -33,6 +33,21 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  flutter_native_splash:  ^0.2.8
+
+  flutter_launcher_icons:  ^0.8.1
+
+flutter_native_splash:
+  color: "#333333"
+  image: assets/images/logoVertical.png
+  android: true
+  ios: true
+
+flutter_icons:
+  image_path: "assets/images/logoSimple2.png"
+  android: true
+  ios: true
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
@@ -45,9 +60,12 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/images/comidaChina.jpg
+    - assets/images/comidaMexicana.jpg
+    - assets/images/comidaPostre.jpg
+    - assets/images/comidaRapida.jpg
+    - assets/images/comidaSaludable.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
