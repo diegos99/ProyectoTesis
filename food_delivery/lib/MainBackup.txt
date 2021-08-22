@@ -1,38 +1,40 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/navigationDrawerWidget.dart';
+import 'package:food_delivery/navigationProvider.dart';
+import 'package:food_delivery/productos.dart';
+import 'package:provider/provider.dart';
 
-import 'detalle.dart';
+void main() {
+  runApp(MyApp());
+}
 
-class ProductosPage extends StatelessWidget {
-  //final int index;
-  final String restaurante;
-  final String imagenes;
-
-  ProductosPage(this.restaurante, this.imagenes) {
-    /* print(this.index);
-    this.index,  */
-    print(this.restaurante);
-    print(this.imagenes);
-  }
-
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: Text('$restaurante'),
-        ),
-        body: Productos());
+    return ChangeNotifierProvider(
+      create: (context) => NavigationProvider(),
+      child: MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Food Delivery AR Prototype',
+      theme: ThemeData(
+        //primarySwatch: Colors.orange,
+        primaryColor: Color(0xFFf0e742), // #333333 negro y #f0e742 amarillo
+      ),
+      home: MyHomePage(), // MyHomePage(title: 'Flutter Demo Home Page'),
+    ));
   }
 }
 
 // start ----- ListView HOME PAGE Restaurantes
-class Productos extends StatefulWidget {
-  const Productos({Key? key}) : super(key: key);
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
-  _ProductosState createState() => _ProductosState();
+  _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _ProductosState extends State<Productos> {
+class _MyHomePageState extends State<MyHomePage> {
   var restaurantNames = [
     "China woook",
     "Delicias mexicanas",
@@ -70,6 +72,11 @@ class _ProductosState extends State<Productos> {
     double width = MediaQuery.of(context).size.width * 0.6;
 
     return Scaffold(
+      drawer: NavigationDrawerWidget(),
+      appBar: AppBar(
+        title: Text("Inicio - Restaurantes"),
+        elevation: 10,
+      ),
       body: ListView.builder(
           itemCount: restaurantNames.length,
           itemBuilder: (context, index) {
@@ -79,7 +86,7 @@ class _ProductosState extends State<Productos> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => DetallePage()));
+                        builder: (context) => ProductosPage(index, restaurantNames[index], restaurantImg[index])));
               },
               child: Card(
                   child: Row(
