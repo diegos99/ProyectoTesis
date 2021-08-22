@@ -71,6 +71,16 @@ flutter:
     - assets/images/comidaSaludable.jpg
     - assets/images/comidaVenezolana.jpg
     - assets/images/aboutUs.png
+    - assets/images/products/arroz.jpg
+    - assets/images/products/chowMein.jpg
+    - assets/images/products/nachos.jpg
+    - assets/images/products/tacos.jpg
+    - assets/images/products/papas.jpg
+    - assets/images/products/wopper.jpg
+    - assets/images/products/flan.jpg
+    - assets/images/products/fresas.jpg
+    - assets/images/products/burrito.jpg
+    - assets/images/products/ensalada.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

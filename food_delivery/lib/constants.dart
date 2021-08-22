@@ -43,12 +43,12 @@ const CHINA_DATA = [
     "platillo":"China woook",
     "description":"Lo mejor de la comida \nchina en China Woook...",
     "precio":"30 a 50 min",
-    "image":"comidaChina.jpg"
+    "image":"assets/images/products/arroz.jpg"
   },{
     "platillo":"China woook",
     "description":"Lo mejor de la comida \nchina en China Woook...",
     "precio":"30 a 50 min",
-    "image":"comidaChina.jpg"
+    "image":"assets/images/products/chowMein.jpg"
   }
 ];
 
@@ -57,12 +57,12 @@ const MEXICO_DATA = [
     "platillo":"China woook",
     "description":"Lo mejor de la comida \nchina en China Woook...",
     "precio":"30 a 50 min",
-    "image":"comidaChina.jpg"
+    "image":"assets/images/products/nachos.jpg"
   },{
     "platillo":"China woook",
     "description":"Lo mejor de la comida \nchina en China Woook...",
     "precio":"30 a 50 min",
-    "image":"comidaChina.jpg"
+    "image":"assets/images/products/tacos.jpg"
   }
 ];
 
@@ -71,12 +71,12 @@ const BURGUER_DATA = [
     "platillo":"China woook",
     "description":"Lo mejor de la comida \nchina en China Woook...",
     "precio":"30 a 50 min",
-    "image":"comidaChina.jpg"
+    "image":"assets/images/products/papas.jpg"
   },{
     "platillo":"China woook",
     "description":"Lo mejor de la comida \nchina en China Woook...",
     "precio":"30 a 50 min",
-    "image":"comidaChina.jpg"
+    "image":"assets/images/products/wopper.jpg"
   }
 ];
 
@@ -85,12 +85,12 @@ const DULCE_DATA = [
     "platillo":"China woook",
     "description":"Lo mejor de la comida \nchina en China Woook...",
     "precio":"30 a 50 min",
-    "image":"comidaChina.jpg"
+    "image":"assets/images/products/flan.jpg"
   },{
     "platillo":"China woook",
     "description":"Lo mejor de la comida \nchina en China Woook...",
     "precio":"30 a 50 min",
-    "image":"comidaChina.jpg"
+    "image":"assets/images/products/fresas.jpg"
   }
 ];
 
@@ -99,12 +99,12 @@ const SALUDABLE_DATA = [
     "platillo":"China woook",
     "description":"Lo mejor de la comida \nchina en China Woook...",
     "precio":"30 a 50 min",
-    "image":"comidaChina.jpg"
+    "image":"assets/images/products/burrito.jpg"
   },{
     "platillo":"China woook",
     "description":"Lo mejor de la comida \nchina en China Woook...",
     "precio":"30 a 50 min",
-    "image":"comidaChina.jpg"
+    "image":"assets/images/products/ensalada.jpg"
   }
 ];
 
