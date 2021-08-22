@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/acercade.dart';
-import 'package:food_delivery/detalle.dart';
 import 'package:food_delivery/main.dart';
 import 'package:food_delivery/navigationItem.dart';
 import 'package:food_delivery/navigationProvider.dart';
