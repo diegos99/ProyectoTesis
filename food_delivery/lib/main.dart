@@ -43,6 +43,35 @@ class _MyHomePageState extends State<MyHomePage> {
 
   List<Widget> itemsData = [];
 
+  // ALERT DIALOG
+  Future<void> _showMyDialog() async {
+  return showDialog<void>(
+    context: context,
+    barrierDismissible: false, // user must tap button!
+    builder: (BuildContext context) {
+      return AlertDialog(
+        title: const Text('¡Alerta!'),
+        content: SingleChildScrollView(
+          child: ListBody(
+            children: const <Widget>[
+              Text('Este restaurante se encuentra cerrado.'),
+              Text('Por favor intenta más tarde.'),
+            ],
+          ),
+        ),
+        actions: <Widget>[
+          TextButton(
+            child: const Text('Ok'),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+          ),
+        ],
+      );
+    },
+  );
+}
+
   void getPostsData() {
     List<dynamic> responseList = FOOD_DATA;
     List<Widget> listItems = [];
@@ -96,10 +125,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 onTap: () {
                   // print(post["name"]);
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => ProductosPage(post["name"], "assets/images/${post["image"]}")));
+                  if (post["name"] == "Arepa Cool") {
+                    _showMyDialog();
+                  } else {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ProductosPage(post["name"],
+                                "assets/images/${post["image"]}")));
+                  }
                 }),
           )));
     });
