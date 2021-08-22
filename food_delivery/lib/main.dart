@@ -120,6 +120,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Image.asset(
                       "assets/images/${post["image"]}",
                       height: double.infinity,
+                      width: 100,
                     )
                   ],
                 ),
