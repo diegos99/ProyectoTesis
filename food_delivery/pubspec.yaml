@@ -71,6 +71,8 @@ flutter:
     - assets/images/comidaSaludable.jpg
     - assets/images/comidaVenezolana.jpg
     - assets/images/aboutUs.png
+    - assets/images/flecha.gif
+    - assets/images/mano.gif
     - assets/images/products/arroz.jpg
     - assets/images/products/chowMein.jpg
     - assets/images/products/nachos.jpg
