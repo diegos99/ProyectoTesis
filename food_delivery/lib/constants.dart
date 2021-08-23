@@ -40,77 +40,77 @@ const FOOD_DATA = [
 // PRODUCTOS DE CADA RESTAURANTE
 const CHINA_DATA = [
   {
-    "platillo":"China woook",
-    "description":"Lo mejor de la comida \nchina en China Woook...",
-    "precio":"30 a 50 min",
+    "platillo":"Arroz chino",
+    "description":"Delicioso arroz chino con camaron acompañado de nuestra salsa soya.",
+    "precio":"Q100.00",
     "image":"assets/images/products/arroz.jpg"
   },{
-    "platillo":"China woook",
-    "description":"Lo mejor de la comida \nchina en China Woook...",
-    "precio":"30 a 50 min",
+    "platillo":"Chow Mein",
+    "description":"Plato personal de chow mein de carne de rez",
+    "precio":"Q100.00",
     "image":"assets/images/products/chowMein.jpg"
   }
 ];
 
 const MEXICO_DATA = [
   {
-    "platillo":"China woook",
-    "description":"Lo mejor de la comida \nchina en China Woook...",
-    "precio":"30 a 50 min",
+    "platillo":"Nachos simples",
+    "description":"Nachos de la casa para acompañar con tu comida diaria.",
+    "precio":"Q50.00",
     "image":"assets/images/products/nachos.jpg"
   },{
-    "platillo":"China woook",
-    "description":"Lo mejor de la comida \nchina en China Woook...",
-    "precio":"30 a 50 min",
+    "platillo":"Tacos al pastor",
+    "description":"Los mejores tacos al pastor de la casa acompañados con nuestra salsa verde.",
+    "precio":"Q60.00",
     "image":"assets/images/products/tacos.jpg"
   }
 ];
 
 const BURGUER_DATA = [
   {
-    "platillo":"China woook",
-    "description":"Lo mejor de la comida \nchina en China Woook...",
-    "precio":"30 a 50 min",
+    "platillo":"Papas fritas",
+    "description":"Papas fritas de la casa.",
+    "precio":"Q10.00",
     "image":"assets/images/products/papas.jpg"
   },{
-    "platillo":"China woook",
-    "description":"Lo mejor de la comida \nchina en China Woook...",
-    "precio":"30 a 50 min",
+    "platillo":"Hamburguesa",
+    "description":"Hamburguesa con carne cocinada al carbón",
+    "precio":"Q40.00",
     "image":"assets/images/products/wopper.jpg"
   }
 ];
 
 const DULCE_DATA = [
   {
-    "platillo":"China woook",
-    "description":"Lo mejor de la comida \nchina en China Woook...",
-    "precio":"30 a 50 min",
+    "platillo":"Flan",
+    "description":"Flan de la abuelita a la puerta de tu casa. (Porción)",
+    "precio":"Q20.00",
     "image":"assets/images/products/flan.jpg"
   },{
-    "platillo":"China woook",
-    "description":"Lo mejor de la comida \nchina en China Woook...",
-    "precio":"30 a 50 min",
+    "platillo":"Fresas con crema",
+    "description":"El pastel más vendido de la casa (porción)",
+    "precio":"Q40.00",
     "image":"assets/images/products/fresas.jpg"
   }
 ];
 
 const SALUDABLE_DATA = [
   {
-    "platillo":"China woook",
-    "description":"Lo mejor de la comida \nchina en China Woook...",
-    "precio":"30 a 50 min",
+    "platillo":"Burrito verde",
+    "description":"Burrito con ensalada adentro, pollo a la plancha acompañado de tu salsa favorita.",
+    "precio":"Q50.00",
     "image":"assets/images/products/burrito.jpg"
   },{
-    "platillo":"China woook",
-    "description":"Lo mejor de la comida \nchina en China Woook...",
-    "precio":"30 a 50 min",
+    "platillo":"Ensalada a la jardinera",
+    "description":"Ensalada acompañada de tu aderezo favorito",
+    "precio":"Q60.00",
     "image":"assets/images/products/ensalada.jpg"
   }
 ];
 
 const AREPA_DATA = [
   {
-    "platillo":"China woook",
+    "platillo":"Arepa",
     "description":"Lo mejor de la comida \nchina en China Woook...",
     "precio":"30 a 50 min",
     "image":"comidaChina.jpg"
