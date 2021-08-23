@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/constants.dart';
 
 import 'detalle.dart';
 
@@ -17,23 +18,37 @@ class ProductosPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('$restaurante'),
+        backgroundColor: Colors.white,
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(200.0),
+          child: AppBar(
+            toolbarHeight: 500,
+            backgroundColor: Colors.white,
+            elevation: 0,
+            title: Image.asset(this.imagenes, height: 250),
+          ),
         ),
-        body: Productos());
+        /* appBar: AppBar(
+          title: Text('$restaurante'),
+        ), */
+        body: Productos('$restaurante', '$imagenes'));
   }
 }
 
 // start ----- ListView HOME PAGE Restaurantes
 class Productos extends StatefulWidget {
-  const Productos({Key? key}) : super(key: key);
+  final String nombreRestaurante;
+  final String pathImagen;
+  Productos(this.nombreRestaurante, this.pathImagen) {
+    print('TIENEEE:' + this.nombreRestaurante);
+  }
 
   @override
   _ProductosState createState() => _ProductosState();
 }
 
 class _ProductosState extends State<Productos> {
-  var restaurantNames = [
+  /* var restaurantNames = [
     "China woook",
     "Delicias mexicanas",
     "Antojitos dulces",
@@ -63,7 +78,7 @@ class _ProductosState extends State<Productos> {
     "assets/images/comidaPostre.jpg",
     "assets/images/comidaRapida.jpg",
     "assets/images/comidaSaludable.jpg"
-  ];
+  ]; */
 
   @override
   Widget build(BuildContext context) {
@@ -71,15 +86,18 @@ class _ProductosState extends State<Productos> {
 
     return Scaffold(
       body: ListView.builder(
-          itemCount: restaurantNames.length,
+          itemCount: CHINA_DATA.length,
           itemBuilder: (context, index) {
             return GestureDetector(
               onTap: () {
                 //print(restaurantNames[index]);
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => DetallePage()));
+                var valor = NombreProds(widget.nombreRestaurante)[index]['platillo'];
+                var valor2 = NombreProds(widget.nombreRestaurante)[index]['description'];
+                var valor3 = NombreProds(widget.nombreRestaurante)[index]['image'];
+                var valor4 = NombreProds(widget.nombreRestaurante)[index]['precio'];
+                
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => DetallePage(valor, valor2, valor3, valor4)));
               },
               child: Card(
                   child: Row(
@@ -87,7 +105,9 @@ class _ProductosState extends State<Productos> {
                   Container(
                     width: 100,
                     height: 100,
-                    child: Image.asset(restaurantImg[index]),
+                    child: Image.asset(
+                        NombreProds(widget.nombreRestaurante)[index]
+                            ['image']), //restaurantImg[index]
                   ),
                   Padding(
                     padding: const EdgeInsets.all(10.0),
@@ -95,7 +115,8 @@ class _ProductosState extends State<Productos> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
-                          restaurantNames[index],
+                          NombreProds(widget.nombreRestaurante)[index]
+                              ['platillo'], //restaurantNames[index]
                           style: TextStyle(
                               fontSize: 21,
                               color: Colors.black,
@@ -107,7 +128,8 @@ class _ProductosState extends State<Productos> {
                         Container(
                           width: width,
                           child: Text(
-                            restaurantDescription[index],
+                            NombreProds(widget.nombreRestaurante)[index]
+                                ['description'],
                             style: TextStyle(
                                 fontSize: 15, color: Colors.grey[500]),
                           ),
@@ -115,7 +137,8 @@ class _ProductosState extends State<Productos> {
                         Container(
                           width: width,
                           child: Text(
-                            restaurantTiempo[index],
+                            NombreProds(widget.nombreRestaurante)[index]
+                                ['precio'],
                             style: TextStyle(
                                 fontSize: 10,
                                 color: Colors.black,
@@ -133,3 +156,17 @@ class _ProductosState extends State<Productos> {
   }
 }
 // end ----- ListView HOME PAGE Restaurantes
+
+NombreProds(String nombre) {
+  if (nombre == 'China woook') {
+    return CHINA_DATA;
+  } else if (nombre == 'Delicias mexicanas') {
+    return MEXICO_DATA;
+  } else if (nombre == 'Burguer Queen') {
+    return BURGUER_DATA;
+  } else if (nombre == 'Antojitos dulces') {
+    return DULCE_DATA;
+  } else if (nombre == 'Healthy Fresh') {
+    return SALUDABLE_DATA;
+  }
+}
