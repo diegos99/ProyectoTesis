@@ -28,6 +28,17 @@ apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 android {
     compileSdkVersion 30
 
+    /* packagingOptions{
+        pickFirst 'lib/armeabi-v7a/libarcore_sdk_jni.so'
+        pickFirst 'lib/arm64-v8a/libarcore_sdk_jni.so'
+        pickFirst 'lib/armeabi-v7a/libarcore_sdk_c.so'
+        pickFirst 'lib/arm64-v8a/libUnityARCore.so'
+        pickFirst 'lib/armeabi-v7a/libUnityARCore.so'
+        pickFirst 'lib/armeabi-v7a/libarpresto_api.so'
+        pickFirst 'lib/arm64-v8a/libarpresto_api.so'
+        pickFirst 'lib/arm64-v8a/libarcore_sdk_c.so'
+    } */
+
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
@@ -35,7 +46,7 @@ android {
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.example.food_delivery"
-        minSdkVersion 16
+        minSdkVersion 24
         targetSdkVersion 30
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
@@ -47,6 +58,15 @@ android {
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig signingConfigs.debug
         }
+        /* debug {
+            signingConfig signingConfigs.debug
+        }
+        profile {
+            signingConfig signingConfigs.debug
+        }
+        innerTest {
+            matchingFallbacks = ['debug', 'release']
+        } */
     }
 }
 
@@ -56,4 +76,6 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    // implementation project(':unityLibrary')
+    //implementation 'com.google.ar:core:1.25.0'
 }
