@@ -18,7 +18,7 @@ class AcercaDePage extends StatelessWidget {
             children: <Widget>[
               Container(
                 child: Image.asset(
-                  'assets/images/aboutUs.png',
+                  'assets/images/aboutUs.webp',
                   height: 200,
                 ),
               ),

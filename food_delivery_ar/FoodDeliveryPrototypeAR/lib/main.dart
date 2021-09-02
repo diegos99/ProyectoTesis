@@ -335,7 +335,7 @@ class CategoriesScroller extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => ProductosPage("Colombia Soul",
-                                "assets/images/comidaColombiana.jpg")));
+                                "assets/images/comidaColombiana.webp")));
                   }),
               new InkWell(
                   child: Container(
@@ -380,7 +380,7 @@ class CategoriesScroller extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => ProductosPage("Aldo's",
-                                "assets/images/comidaVinos.jpg")));
+                                "assets/images/comidaVinos.webp")));
                   }),
               new InkWell(
                   child: Container(

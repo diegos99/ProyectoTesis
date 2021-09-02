@@ -79,7 +79,7 @@ class _Object3DState extends State<Object3D> {
     arCoreController.dispose();
   }
 
-  List<String> objectFileName = ["Fries.sfb"];
+  /* List<String> objectFileName = ["Fries.sfb"]; */
 
   @override
   Widget build(BuildContext context) {
@@ -109,7 +109,7 @@ class _Object3DState extends State<Object3D> {
 }
 
 // ui
-class ListObjectSelection extends StatefulWidget {
+/* class ListObjectSelection extends StatefulWidget {
   final Function onTap;
 
   ListObjectSelection({this.onTap});
@@ -157,3 +157,4 @@ class _ListObjectSelectionState extends State<ListObjectSelection> {
     );
   }
 }
+ */

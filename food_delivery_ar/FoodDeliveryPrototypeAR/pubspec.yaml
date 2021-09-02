@@ -16,6 +16,9 @@ dependencies:
   provider: ^5.0.0
   url_launcher: ^6.0.9
 
+  firebase_storage: ^10.0.3
+  firebase_core: ^1.6.0
+
 
 dev_dependencies:
   flutter_test:
@@ -52,27 +55,28 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-  - assets/images/comidaItaliana.jpg
-  - assets/images/comidaColombiana.jpg
-  - assets/images/comidaPostre.jpg
-  - assets/images/comidaRapida.jpg
-  - assets/images/comidaSaludable.jpg
-  - assets/images/comidaVinos.jpg
-  - assets/images/aboutUs.png
+  - assets/images/comidaItaliana.webp
+  - assets/images/comidaItaliana.webp
+  - assets/images/comidaColombiana.webp
+  - assets/images/comidaPostre.webp
+  - assets/images/comidaRapida.webp
+  - assets/images/comidaSaludable.webp
+  - assets/images/comidaVinos.webp
+  - assets/images/aboutUs.webp
   - assets/images/flecha.gif
   - assets/images/mano.gif
-  - assets/images/products/pasta.jpg
-  - assets/images/products/pizza.jpg
-  - assets/images/products/paisa.jpg
-  - assets/images/products/productoNuevo.jpg
-  - assets/images/products/papas.jpg
-  - assets/images/products/wopper.jpg
-  - assets/images/products/frutas.jpg
-  - assets/images/products/cereza.jpg
-  - assets/images/products/submarino.jpg
-  - assets/images/products/carne.jpg
-  - assets/images/products/vinos.jpg
-  - assets/images/products/quesos.jpg
+  - assets/images/products/pasta.webp
+  - assets/images/products/pizza.webp
+  - assets/images/products/paisa.webp
+  - assets/images/products/productoNuevo.webp
+  - assets/images/products/papas.webp
+  - assets/images/products/wopper.webp
+  - assets/images/products/frutas.webp
+  - assets/images/products/cereza.webp
+  - assets/images/products/submarino.webp
+  - assets/images/products/carne.webp
+  - assets/images/products/vinos.webp
+  - assets/images/products/quesos.webp
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
