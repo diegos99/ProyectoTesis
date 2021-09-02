@@ -91,40 +91,52 @@ class Detalle extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(5),
-                      child: Image.asset(
-                        'assets/images/mano.gif',
-                        width: 200,
-                        height: 150,
+                    new InkWell(
+                      child: Column(
+                        children: <Widget>[
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(5),
+                            child: Image.asset(
+                              'assets/images/mano.gif',
+                              width: 200,
+                              height: 150,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            'Presiona la imagen',
+                            style: TextStyle(
+                              fontSize: 25,
+                              color: Color(0xFFffd800),
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Container(
+                            // width: 200,
+                            child: Align(
+                              alignment: Alignment.center,
+                              child: Text(
+                                'para ver el producto en Realidad Aumentada',
+                                maxLines: 3,
+                                style:
+                                    TextStyle(fontSize: 17, color: Color(0xFFffd800), fontWeight: FontWeight.bold),
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      'Presiona la imagen',
-                      style: TextStyle(
-                        fontSize: 25,
-                        color: Color(0xFFffd800),
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Container(
-                      // width: 200,
-                      child: Align(
-                        alignment: Alignment.center,
-                        child: Text(
-                          'para ver el producto en Realidad Aumentada',
-                          maxLines: 3,
-                          style:
-                              TextStyle(fontSize: 17, color: Color(0xFFffd800), fontWeight: FontWeight.bold),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
+                      onTap: (){
+                         Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Object3D(this.producto, this.Model3dAsset)));
+                      },
                     ),
                   ],
                 ),

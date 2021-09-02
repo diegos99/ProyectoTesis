@@ -25,7 +25,7 @@ class AcercaDePage extends StatelessWidget {
               ),
               Container(
                   child: Text(
-                    'Esta app es un prototipo realizado para mi proyecto de graduación únicamente para fines de investigación. Durante el uso de la aplicación no se solicitará ningún dato personal o de pago, únicamente es para probar el módulo de Realidad Aumenda y visualizar los diversos productos en esta tecnología. \n',
+                    'Esta app es un prototipo realizado para mi proyecto de graduación únicamente para fines de investigación. Durante el uso de la aplicación no se solicitará ningún dato personal o de pago, únicamente es para probar el módulo de Realidad Aumentada y visualizar los diversos productos en esta tecnología. \n',
                     textAlign: TextAlign.justify,
                     style: TextStyle(fontSize: 18, height: 1.5),
               )),

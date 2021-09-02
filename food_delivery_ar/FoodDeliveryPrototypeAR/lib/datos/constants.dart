@@ -88,8 +88,8 @@ const BURGUER_DATA = [
 
 const DULCE_DATA = [
   {
-    "platillo":"cereza con crema",
-    "description":"Pastel cereza con crema (entero)",
+    "platillo":"Frutas con crema",
+    "description":"Pastel frutas con crema (entero)",
     "precio":"Q85.00",
     "image":"assets/images/products/frutas.jpg",
     "Model3dAsset":"Kake.sfb"
